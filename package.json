@@ -2,7 +2,7 @@
   "name": "legalclinic-privacyregister",
   "version": "1.0.0",
   "description": "An AVG helptool",
-  "homepage": "https://github.com/brthrs/clinic-webapp",
+  "homepage": "https://github.com/legalclinic/privacyregister",
   "private": true,
   "scripts": {
     "lintFix": "eslint --fix . --ext .vue --ignore-pattern node_modules/",
