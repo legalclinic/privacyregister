@@ -1,0 +1,230 @@
+// Frontpage
+//
+// @package   RefugeeTalentHub
+// @link      https://clinic.com
+// @author    Robin Eijsbouts (@robinEijsbouts)
+// @copyright Brthrs Agency B.V.
+// @since     1.0.0-beta
+
+// Color system
+//
+// ...
+
+// stylelint-disable
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$grays: () !default;
+$grays: map-merge(
+  (
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900
+  ),
+  $grays
+);
+
+$blue:    #007bff !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+
+$colors: () !default;
+$colors: map-merge(
+  (
+    "blue":       $blue,
+    "indigo":     $indigo,
+    "purple":     $purple,
+    "pink":       $pink,
+    "red":        $red,
+    "orange":     $orange,
+    "yellow":     $yellow,
+    "green":      $green,
+    "teal":       $teal,
+    "cyan":       $cyan,
+    "white":      $white,
+    "gray":       $gray-600,
+    "gray-dark":  $gray-800
+  ),
+  $colors
+);
+
+$primary:            #009EE0 !default;
+$secondary:          #9B9B9B !default;
+$secondary-dark:     #909090 !default;
+$cl-darkgray:        #373A3C !default;
+$lightgray:          #CCCCCC !default;
+$lightgray-light:    #999999 !default;
+$success:            $green !default;
+$info:               $cyan !default;
+$warning:            $yellow !default;
+$danger:             $red !default;
+$light:              $gray-100 !default;
+$dark:               $gray-800 !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    "primary":            $primary,
+    "secondary":          $secondary,
+    "secondary-dark":     $secondary-dark,
+    "cl-darkgray":        $cl-darkgray,
+    "lightgray":          $lightgray,
+    "lightgray-light":    $lightgray-light,
+    "success":            $success,
+    "info":               $info,
+    "warning":            $warning,
+    "danger":             $danger,
+    "light":              $light,
+    "dark":               $dark
+  ),
+  $theme-colors
+);
+// stylelint-enable
+
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-caret:              true !default;
+$enable-rounded:            true !default;
+$enable-shadows:            false !default;
+$enable-gradients:          false !default;
+$enable-transitions:        true !default;
+$enable-hover-media-query:  false !default; // Deprecated, no longer affects any compiled CSS
+$enable-grid-classes:       true !default;
+$enable-print-styles:       true !default;
+
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+// stylelint-disable
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 3)
+  ),
+  $spacers
+);
+
+// This variable affects the `.h-*` and `.w-*` classes.
+$sizes: () !default;
+$sizes: map-merge(
+  (
+    25: 25%,
+    50: 50%,
+    75: 75%,
+    100: 100%,
+    auto: auto
+  ),
+  $sizes
+);
+// stylelint-enable
+
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+// $grid-columns:             12 !default;
+$grid-gutter-width:           30px !default;
+
+
+// Body
+//
+// Settings for the `<body>` element.
+$body-bg:                     $white !default;
+$body-color:                  $gray-900 !default;
+
+
+// Links
+//
+// Style anchor elements.
+$link-color:                  theme-color("primary") !default;
+$link-decoration:             none !default;
+$link-hover-color:            darken($link-color, 15%) !default;
+$link-hover-decoration:       underline !default;
+
+// Type
+//
+// Type, font, line-height, and color for body text, headings, and more.
+// $font-family-primary:         -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+// $font-family-secondary:       'Playfair Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default;
+// $font-family-base:            $font-family-primary !default;
+
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-medium:          500 !default;
+$font-weight-bold:            700 !default;
+
+// $font-size-base:           1rem !default;
+// $font-size-lg:             1.25rem !default;
+// $font-size-sm:             .7rem !default;
+
+// $font-weight-base:          $font-weight-light !default;
+// $line-height-base:          1.5 !default;
+
+$headings-color:               theme-color('quaternary') !default;
+// $headings-font-family:         $font-family-primary !default;
+
+
+// Paragraphs
+//
+// ...
+$paragraph-margin-bottom:       1rem !default;
+
+
+//
+// Navs
+$nav-link-padding-y:            .5rem !default;
+$nav-link-padding-x:            1rem !default;
+
+
+// Navbar
+//
+//
+$gr-navbar-height:              3rem;
+
+$navbar-padding-y:              ($spacer * 1.8);
+
+$navbar-dark-color:             rgba($white, .5) !default;
+$navbar-dark-hover-color:       rgba($white, .75) !default;
+$navbar-dark-active-color:      $white !default;
+$navbar-dark-disabled-color:    rgba($white, .25) !default;
+
+$navbar-light-color:            rgba($black, .5) !default;
+$navbar-light-hover-color:      rgba($black, .7) !default;
+$navbar-light-active-color:     rgba($black, .9) !default;
+$navbar-light-disabled-color:   rgba($black, .3) !default;
