@@ -5,14 +5,19 @@
     </b-navbar>
 
     <b-row align-content="center" align-v="center" class="cl-content-wrapper">
-      <b-col cols="9" class="mx-auto mt-5">
+      <b-col cols="11" md="9" class="mx-auto mt-md-5">
 
-        <b-col cols="12" lg="8" class="mx-auto text-center">
-          <h2 class="font-weight-bold">Organisation info</h2>
-          <p>Start by adding information on your organisation. You can edit this information later and at least one way of contact is required in your register. Fields with an <span class="text-danger">*</span> are legally required.</p>
-        </b-col>
+        <!-- Wrap the content in a row to match bootstraps guidelines -->
+        <b-row>
 
-        <cl-form :form="form" :storageKey="storageKey" :redirect="redirect" :content="content" class="mt-5"></cl-form>
+          <b-col cols="12" lg="8" class="mx-auto text-center">
+            <h2 class="font-weight-bold">Organisation info</h2>
+            <p>Start by adding information on your organisation. You can edit this information later and at least one way of contact is required in your register. Fields with an <span class="text-danger">*</span> are legally required.</p>
+          </b-col>
+
+          <cl-form :form="form" :storageKey="storageKey" :redirect="redirect" :content="content" class="mt-5"></cl-form>
+
+        </b-row>
 
       </b-col>
     </b-row>

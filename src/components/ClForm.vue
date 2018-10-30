@@ -22,7 +22,8 @@
 
         <b-col
           v-for="(field, index) in (Number.isInteger(activeQuestion) ? form[activeQuestion].fields : form)"
-          :cols="field.col"
+          cols="12"
+          :md="field.col"
           :key="'field' + index">
 
           <!-- display our label -->
